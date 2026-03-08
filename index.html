@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>薪酬系统操作常见问题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 关键：解决防盗链和CORS问题 -->
+  <meta name="referrer" content="no-referrer">
+  
+  <style>
+    /* 基础样式确保图片正常显示 */
+    #main img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+    /* 加载失败图片样式 */
+    img[data-error] {
+      border: 2px dashed #ff4444;
+      padding: 10px;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  
+  <script>
+    window.$docsify = {
+      name: '薪酬系统操作常见问题',
+      repo: 'https://github.com/BYTX-YGJ/bytx_wiki',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      search: {
+        placeholder: '搜索文档...'
+      },
+      // 重要配置：确保正确处理外部内容
+      executeScript: true,
+      noEmoji: false,
+      relativePath: false,
+      // 修复外部链接
+      externalLinkTarget: '_blank',
+      externalLinkRel: 'noopener',
+      // 修复图片路径处理
+      markdown: {
+        renderer: {
+          image: function(href, title, text) {
+            // 确保Gitee图片链接正确处理
+            if (href && href.includes('gitee.com')) {
+              // 清理URL，确保格式正确
+              href = href.replace(/\s+/g, '');
+              // 如果URL不包含?raw=true，添加它
+              if (!href.includes('?raw=true')) {
+                href += (href.includes('?') ? '&' : '?') + 'raw=true';
+              }
+              // 添加时间戳避免缓存
+              href += (href.includes('?') ? '&' : '?') + 't=' + Date.now();
+            }
+            return '<img src="' + href + '" alt="' + text + '"' + (title ? ' title="' + title + '"' : '') + ' loading="lazy">';
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Docsify核心 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  
+  <!-- 图片加载修复插件 -->
+  <script>
+    (function() {
+      // 图片加载修复插件
+      var imageFixPlugin = function(hook, vm) {
+        // 每次内容更新后执行
+        hook.doneEach(function() {
+          setTimeout(fixImages, 100);
+        });
+        
+        function fixImages() {
+          var images = document.querySelectorAll('#main img');
+          
+          images.forEach(function(img) {
+            var originalSrc = img.src;
+            
+            // 只处理Gitee图片
+            if (originalSrc.includes('gitee.com')) {
+              // 如果图片已经加载失败
+              if (img.complete && img.naturalHeight === 0) {
+                retryLoadImage(img);
+              }
+              
+              // 添加错误处理
+              img.onerror = function() {
+                this.setAttribute('data-error', 'true');
+                retryLoadImage(this);
+              };
+              
+              // 添加加载成功处理
+              img.onload = function() {
+                this.removeAttribute('data-error');
+              };
+            }
+          });
+        }
+        
+        function retryLoadImage(imgElement) {
+          var src = imgElement.src;
+          
+          // 移除错误标记
+          imgElement.removeAttribute('data-error');
+          
+          // 创建新的图片对象测试
+          var testImg = new Image();
+          testImg.onload = function() {
+            imgElement.src = this.src;
+          };
+          
+          testImg.onerror = function() {
+            // 添加缓存破坏参数
+            var newSrc = src.split('?')[0] + '?raw=true&t=' + Date.now();
+            
+            var fallbackImg = new Image();
+            fallbackImg.onload = function() {
+              imgElement.src = this.src;
+            };
+            fallbackImg.onerror = function() {
+              imgElement.alt = '[图片加载失败]';
+              imgElement.style.border = '2px dashed #ccc';
+              imgElement.style.padding = '20px';
+              imgElement.style.textAlign = 'center';
+              imgElement.style.color = '#666';
+            };
+            fallbackImg.src = newSrc;
+          };
+          
+          // 先尝试原始URL（带缓存破坏）
+          var testSrc = src;
+          if (!testSrc.includes('?')) {
+            testSrc += '?t=' + Date.now();
+          }
+          testImg.src = testSrc;
+        }
+      };
+      
+      // 初始化插件
+      window.$docsify = window.$docsify || {};
+      window.$docsify.plugins = (window.$docsify.plugins || []).concat(imageFixPlugin);
+    })();
+  </script>
+</body>
+</html>
