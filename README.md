@@ -1,32 +1,14 @@
-# [**人力资源系统**](http://121.28.192.238:8562/salary/dashboard)
+# [**项目工资计算**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation)
 
-## **考勤管理**
+## [**工资标准**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/SalaryStandardTemplate)
 
-# **常见**问题
+### 一、维护对应项目、岗位、月份工资标准
 
-## 钉钉有打卡记录但薪酬系统无考勤记录
+![image-20260309150427228](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260309150427228.png)
 
-1、[薪酬管理/考勤管理/出勤记录/钉钉打卡记录/钉钉打卡记录](http://121.28.192.238:8562/salary/attend/attendancerecordrest)，重新拉取考勤记录，看是否能够拉取成功，如果拉取不到出勤记录详见[出勤记录无法拉取](#出勤记录无法拉取)
-
-![imge](https://gitee.com/bytxrl/wiki-images/raw/master/MTY4ODg1NzM4NzY1MzgwOQ_108072_yA2VR82Gl8QrXIEe_1765166087)
-
-2、
-
-## 出勤记录无法拉取
-
-1、[薪酬管理/员工管理/员工档案](http://121.28.192.238:8562/salary/staff/staffmanagement)-详情查看员工钉钉手机号与钉钉号与[钉钉后台/成员管理](https://oa.dingtalk.com/contacts.htm#/contacts)对应信息是否一致，不一致的按照实际情况修改正确，详见[钉钉手机号修改](#钉钉手机号修改)
+## [应出勤](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/AttendanceTemplate)
 
 
 
-2、如果信息一致的，那么查看[薪酬管理/考勤管理/出勤记录/不同钉钉号维护]([出勤记录](http://121.28.192.238:8562/salary/attend/attendancerecordrest))对应月份是否有多条记录
 
-## 钉钉手机号修改
-
-途径一
-
-员工：手机钉钉点击“我的”---点击下面的“设置与隐私”——点击最上面的“我的信息”——点击“手机号码”——再点击更新手机号码
-
-人事：修改对应员工档案钉钉手机号
-
-途径二
 
