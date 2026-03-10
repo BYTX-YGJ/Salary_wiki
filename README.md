@@ -2,42 +2,7 @@
 
 ## 一、总体流程
 
-```mermaid
-block-beta
-  columns 4
-    A["生成完整工资表"]:4
-    space:4
-    C["上传"]
-    B["计算基础部分"]:3
-    space:4
-    D4[" "]
-    D1["应出勤"]
-    D2["工资标准"]
-    D3["计算规则"]
-  	space:4
-  	E1["绩效及奖惩"]
-  	E2["考勤数据"]:3
-    D1 -...-> B
-    D2 -...-> B
-    D3 -...-> B
-    E1 -- "审核通过" ==> C
-    B -...-> A
-    C -...-> A
-    E2 -...-> D1
-    E2 -...-> D2
-    E2-...-> D3
-    
-    %% 学术风配色方案
-    style A fill:#F8F9FA,stroke:#212529,stroke-width:3px,color:#000000,font-weight:bold  /* 重点黑 */
-    style B fill:#E6F0ED,stroke:#2C4A3E,stroke-width:2px,color:#1A2E22  /* 墨绿 */
-    style C fill:#E9ECEF,stroke:#495057,stroke-width:2px,color:#343A40  /* 剑桥灰 */
-    style D1 fill:#F5EFE6,stroke:#8D6E63,stroke-width:1.5px,color:#5D4037  /* 古铜 */
-    style D2 fill:#E9ECEF,stroke:#495057,stroke-width:1.5px,color:#343A40  /* 剑桥灰 */
-    style D3 fill:#F5EFE6,stroke:#8D6E63,stroke-width:1.5px,color:#5D4037  /* 古铜 */
-    style D4 fill:#FDF3F4,stroke:#8B2635,stroke-width:1.5px,color:#5C1A26  /* 深红 */
-    style E2 fill:#E6F0ED,stroke:#2C4A3E,stroke-width:2px,color:#1A2E22  /* 墨绿 */
-    style E1 fill:#FDF3F4,stroke:#8B2635,stroke-width:1.5px,color:#5C1A26  /* 深红 */
-```
+![image-20260310101647485](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310101647485.png)
 
 按照项目组、岗位、业务线（可选）维护对应应出勤、计算规则、工资标准；依据"考勤汇总"、"考勤汇总（转岗）中信息生成对应工资标准、应出勤、计算规则（<span style='color:red;background:;font-size:文字大小;font-family:字体;'>没有维护考勤的无法生成</span>）；
 
@@ -55,7 +20,7 @@ block-beta
 
 2、审批通过后的数据点击生成按钮会将工资标准生成至对应人身上
 
-![image-20260310093617066](C:/Users/134657/AppData/Roaming/Typora/typora-user-images/image-20260310093617066.png)
+![image-20260310093617066](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310093617066.png)
 
 ## [**三、应出勤**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/AttendanceTemplate)
 
@@ -79,7 +44,7 @@ block-beta
 
 ![image-20260310093808295](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310093808295.png)
 
-## 四、[其它绩效数据](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/OtherPerformanceData)
+## [**四、其它绩效数据**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/OtherPerformanceData)
 
 将以下涉及的内容，上传至薪酬管理/项目工资/项目工资计算/其它绩效数据，注意上传时，员工岗位与项目要与薪酬系统保持一致，否则无法读取，（例如：当月员工A在项目B担任话务员岗位，在项目C担任组长岗位，那么在上传其它绩效数据时，能正确读取的数据是员工A项目B话务员，员工A项目C组长；如果上传员工A项目B组长的数据，那么该条数据无法被读取）
 
@@ -87,7 +52,7 @@ block-beta
 
 ![image-20260310100347152](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310100347152.png)
 
-## 五、[工资计算结果](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/FirstSalaryInquiry)
+## [**五、工资计算结果**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/FirstSalaryInquiry)
 
 ![image-20260310100941207](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310100941207.png)
 
