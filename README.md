@@ -44,6 +44,8 @@
 
 ![image-20260310093808295](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310093808295.png)
 
+3、审批通过后的数据点击生成按钮会将工资标准生成至对应人身上![image-20260310101954278](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310101954278.png)
+
 ## [**四、其它绩效数据**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/OtherPerformanceData)
 
 将以下涉及的内容，上传至薪酬管理/项目工资/项目工资计算/其它绩效数据，注意上传时，员工岗位与项目要与薪酬系统保持一致，否则无法读取，（例如：当月员工A在项目B担任话务员岗位，在项目C担任组长岗位，那么在上传其它绩效数据时，能正确读取的数据是员工A项目B话务员，员工A项目C组长；如果上传员工A项目B组长的数据，那么该条数据无法被读取）
