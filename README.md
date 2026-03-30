@@ -58,4 +58,20 @@
 
 ![image-20260310100941207](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310100941207.png)
 
-## 六、常见问题
+## [**六、业务线条**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/BusinessLineName)
+
+### 1、业务线条名称
+
+在业务线条名称页面新增对应项目存在的业务线条名称用于区分不同业务线的工资标准
+
+例如：项目A话务员存在三种业务类型对应三个工资标准，可以在此业务新增三种业务类型
+
+![image-20260330170727945](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260330170727945.png)
+
+### 2、业务线条维护
+
+在此页面以月度为单位将人和对应的业务线条相对应
+
+![image-20260330171118855](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260330171118855.png)
+
+## 七、常见问题
