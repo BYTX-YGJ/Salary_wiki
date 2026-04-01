@@ -12,7 +12,23 @@
 
 信息生成至个人后，"[薪酬管理/项目工资/项目工资计算/工资计算结果/工资查询](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/FirstSalaryInquiry)"，计算个人、项目组、月份的基础工资
 
-## [**二、工资标准**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/SalaryStandardTemplate)
+## [**二、业务线条**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/BusinessLineName)
+
+### 1、业务线条名称
+
+在业务线条名称页面新增对应项目存在的业务线条名称用于区分不同业务线的工资标准
+
+例如：项目A话务员存在三种业务类型对应三个工资标准，可以在此业务新增三种业务类型
+
+![image-20260330170727945](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260330170727945.png)
+
+### 2、业务线条维护
+
+在此页面以月度为单位将人和对应的业务线条相对应
+
+![image-20260330171118855](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260330171118855.png)
+
+## [**三、工资标准**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/SalaryStandardTemplate)
 
 1、首先按照项目、岗位、年月、业务类型维护对应的工资标准，维护好后找对应工资复核对接人审批，已审批通过的次月自动生成无需重复维护（例如：3月4号审批通过了2月的对应数据，那么4月1号会根据已审批通过的2月数据生成3月的工资标准）
 
@@ -22,7 +38,7 @@
 
 ![image-20260310093617066](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310093617066.png)
 
-## [**三、应出勤**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/AttendanceTemplate)
+## [**四、应出勤**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/AttendanceTemplate)
 
 1、首先按照项目、岗位、年月、业务类型维护对应的应出勤，维护好后找对应工资复核对接人审批，已审批通过的次月自动生成无需重复维护（例如：3月4号审批通过了2月的对应数据，那么4月1号会根据已审批通过的2月数据生成3月的应出勤）
 
@@ -46,7 +62,7 @@
 
 3、审批通过后的数据点击生成按钮会将工资标准生成至对应人身上![image-20260310101954278](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310101954278.png)
 
-## [**四、其它绩效数据**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/OtherPerformanceData)
+## [**五、其它绩效数据**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/OtherPerformanceData)
 
 将以下涉及的内容，上传至薪酬管理/项目工资/项目工资计算/其它绩效数据，注意上传时，员工岗位与项目要与薪酬系统保持一致，否则无法读取，（例如：当月员工A在项目B担任话务员岗位，在项目C担任组长岗位，那么在上传其它绩效数据时，能正确读取的数据是员工A项目B话务员，员工A项目C组长；如果上传员工A项目B组长的数据，那么该条数据无法被读取）
 
@@ -54,24 +70,10 @@
 
 ![image-20260310100347152](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310100347152.png)
 
-## [**五、工资计算结果**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/FirstSalaryInquiry)
+## [**六、工资计算结果**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/FirstSalaryInquiry)
 
 ![image-20260310100941207](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260310100941207.png)
 
-## [**六、业务线条**](http://121.28.192.238:8562/salary/projectPay/projectSalaryCalculation/BusinessLineName)
 
-### 1、业务线条名称
-
-在业务线条名称页面新增对应项目存在的业务线条名称用于区分不同业务线的工资标准
-
-例如：项目A话务员存在三种业务类型对应三个工资标准，可以在此业务新增三种业务类型
-
-![image-20260330170727945](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260330170727945.png)
-
-### 2、业务线条维护
-
-在此页面以月度为单位将人和对应的业务线条相对应
-
-![image-20260330171118855](https://gitee.com/bytxrl/wiki-images/raw/master/image-20260330171118855.png)
 
 ## 七、常见问题
